@@ -1,3 +1,5 @@
+# Warning This is in BETA 0.1v
+
 # customCMD - Custom Command Prompt
 
 customCMD is a customizable command prompt script with a retro-style ASCII art banner. It allows you to define and run custom commands, toggle settings, and execute Python scripts. This README provides instructions on how to use and customize the code to fit your needs.
@@ -16,3 +18,7 @@ You will need:
 
 1. Clone the customCMD repository to your local machine.
 2. pip install colorama or just run bat file
+
+### Version
+
+Warning this is in BETA 0.1v
