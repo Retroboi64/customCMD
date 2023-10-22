@@ -1,5 +1,7 @@
 # Warning This is in BETA 0.1v
 
+![What it looks like](img/image_2023-10-22_121439345.png)
+
 # customCMD - Custom Command Prompt
 
 customCMD is a customizable command prompt script with a retro-style ASCII art banner. It allows you to define and run custom commands, toggle settings, and execute Python scripts. This README provides instructions on how to use and customize the code to fit your needs.
