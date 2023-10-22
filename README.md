@@ -1,4 +1,4 @@
-# Warning This is in BETA v0.1
+# Warning This is in BETA v0.2
 
 [![YouTube Video](img/image_2023-10-22_121439345.png)](https://www.youtube.com/watch?v=W6pHGeS-slw)
 
