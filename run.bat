@@ -1,24 +1,30 @@
 @echo off
-echo Installing Python and required libraries for customCMD...
+chcp 65001 >nul
+cls
 
+:menu
+echo [91m▄▄▄  ▄• ▄▌ ▐ ▄ [0m
+echo [92m▀▄ █·█▪██▌•█▌▐█[0m
+echo [93m▐▀▀▄ █▌▐█▌▐█▐▐▌[0m
+echo [94m▐█•█▌▐█▄█▌██▐█▌[0m
+echo [95m.▀  ▀ ▀▀▀ ▀▀ █▪[0m
+echo.
+echo [91mWarning Run install bat if you have already installed it.[0m
+echo.
+echo Please select the mode to run the customCMD script:
+echo 1. Text-Based Mode
+echo 2. GUI Mode (This mode is used for debugging)
+set /p mode="Enter the mode (1/2): "
 
-python --version 2>NUL
-if %errorlevel%==0 (
-    echo Python is already installed.
+if "%mode%"=="1" (
+    echo Running in Text-Based Mode...
+    python main.py
+) else if "%mode%"=="2" (
+    echo Running in GUI Mode...
+    python gui.pyw
 ) else (
-    :: Download and install Python 3.11
-    echo Installing Python...
-    
-    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.python.org/ftp/python/3.11.6/python-3.11.6.exe', 'python-installer.exe')"
-    start /wait python-installer.exe /quiet
-    del python-installer.exe
-    echo Python installed successfully.
+    echo Invalid input. Please enter 1 for Text-Based Mode or 2 for GUI Mode.
+    goto menu
 )
 
-
-echo Installing colorama library...
-python -m pip install colorama
-
-
-echo Installation complete.
 pause
