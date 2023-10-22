@@ -1,4 +1,4 @@
-# Warning This is in BETA 0.1v
+# Warning This is in BETA v0.1
 
 ![What it looks like](img/image_2023-10-22_121439345.png)
 
