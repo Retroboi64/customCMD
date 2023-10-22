@@ -1,4 +1,4 @@
-#Made by retroi64 pls don't copy
+#no copying
 import os
 import sys
 from colorama import init, Fore, Back, Style
@@ -19,8 +19,8 @@ banner = f"""
 ________________________________________________________________
 {Fore.RESET}
 
-||For help, type {Fore.CYAN}help{Fore.RESET}||
-||Example command, type {Fore.CYAN}custom{Fore.RESET}||
+{Fore.CYAN}||{Fore.RESET}For help, type {Fore.YELLOW}help{Fore.CYAN}||{Fore.RESET}
+{Fore.CYAN}||{Fore.RESET}Example command, type {Fore.YELLOW}custom{Fore.CYAN}||{Fore.RESET}
 \n
 """
 
@@ -87,7 +87,7 @@ def run_python_script(script_name):
     except FileNotFoundError:
         print(f"{Fore.RED}File not found.{Fore.RESET}")
 
-#custom commands
+#custem commands
 
 # All commands
 commands = {
