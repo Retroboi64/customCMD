@@ -5,12 +5,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             margin: 20px auto;
             padding: 20px;
@@ -36,10 +37,12 @@
             display: inline-block;
             margin-top: 20px;
             font-size: 20px;
-            transition: background-color 0.3s;
+            transition: all 0.3s; /* Add a smooth transition for all properties */
         }
         .download-button:hover {
             background-color: #0056b3;
+            transform: scale(1.05); /* Add a scale effect to make it "pop out" */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
         }
         h2 {
             margin-top: 20px;
@@ -68,7 +71,6 @@
             <li>3. Improved readability for convenience</li>
             <li>4. Added detailed notes in the code for better understanding</li>
         </ul>
-
         <h2>Installation Instructions</h2>
         <pre>
 <code>
