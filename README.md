@@ -16,7 +16,7 @@ These instructions will help you set up and customize customCMD.
 
 You will need:
 
-- Python 3.x installed on your system.
+- Python 3.1.1 installed on your system.
 
 ### Installation
 
