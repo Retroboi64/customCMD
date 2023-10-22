@@ -1,7 +1,8 @@
 # Warning This is in BETA v0.1
 
-![What it looks like](img/image_2023-10-22_121439345.png)
-[![YouTube Video](https://www.youtube.com/watch?v=W6pHGeS-slw)
+[![YouTube Video](img/image_2023-10-22_121439345.png)](https://www.youtube.com/watch?v=W6pHGeS-slw)
+
+Click the image above to watch the video on YouTube.
 
 # customCMD - Custom Command Prompt
 
