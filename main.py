@@ -87,7 +87,7 @@ def run_python_script(script_name):
     except FileNotFoundError:
         print(f"{Fore.RED}File not found.{Fore.RESET}")
 
-#custem commands
+#custom commands
 
 # All commands
 commands = {
