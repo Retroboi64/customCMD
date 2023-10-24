@@ -1,4 +1,5 @@
-#version v0.3
+# version v0.3
+
 # customCMD - Custom Command Prompt 
 
 ![customCMD Banner](img/image_2023-10-22_121439345.png)
