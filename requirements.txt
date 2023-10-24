@@ -1,0 +1,8 @@
+# requirements.txt
+numpy
+pandas
+matplotlib
+requests
+flask
+django
+colorama
