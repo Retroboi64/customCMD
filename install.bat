@@ -16,8 +16,10 @@ if %errorlevel%==0 (
 )
 
 
-echo Installing colorama library...
-python -m pip install colorama
+echo Installing all librarys...
+python -m pip install -r requirements.txt
+
+
 
 
 echo Installation complete.
