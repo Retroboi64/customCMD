@@ -2,24 +2,23 @@
 
 ![customCMD Banner](img/image_2023-10-22_121439345.png)
 
-customCMD is a customizable command prompt script with a retro-style ASCII art banner. This project allows you to define and run custom commands, toggle settings, and execute Python scripts. Whether you're a fan of retro gaming or just looking for a unique command prompt experience, customCMD has got you covered.
+**customCMD** is a unique and customizable command prompt script that boasts a retro-style ASCII art banner. This project empowers you to define and execute custom commands, manage settings, and run Python scripts. Whether you're a retro gaming enthusiast or simply seeking a distinct command prompt experience, customCMD has you covered.
 
 ## Getting Started
 
-These instructions will guide you through setting up and customizing customCMD.
+To get started with customCMD, follow these instructions to set up and customize your command prompt:
 
 ### Prerequisites
 
-Before you get started, make sure you have the following:
+Ensure that you have the following prerequisites in place before proceeding:
 
 - Python 3.1.1 installed on your system.
 
 ### Installation
 
-1. **Clone the Repository**: Start by cloning the customCMD repository to your local machine. You can do this using Git or by downloading the repository as a ZIP file and extracting it.
+1. **Clone the Repository**: Begin by cloning the customCMD repository to your local machine. You can achieve this using Git or by downloading the repository as a ZIP file and extracting its contents.
 
-2. **Install Dependencies**: You'll need to install the Colorama package. You can do this by running the following command in your terminal:
+2. **Install Dependencies**: You can streamline the installation process by running the provided `install.bat` script:
    ```sh
    run install.bat
-
-3. Then run run.bat (recommand 1)
+3. Then run run.bat
