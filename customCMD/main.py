@@ -4,6 +4,18 @@ from colorama import init, Fore, Back, Style
 import getpass
 import tkinter as tk
 from tkinter import messagebox
+import socket
+import fnmatch
+import time
+import uuid
+import py_compile
+import subprocess
+import shutil
+import socket
+from settings import *
+import random
+import requests
+
 
 # Initialize colorama
 init()
@@ -48,6 +60,12 @@ def help_command():
     print(f"{'cd':<20}to change the current directory")
     print(f"{'exit':<20}Quit CustomCmd")
     print(f"{'all':<20} To display all commands")
+    print(f"{'date':<20}To show the current date")
+    print(f"{'ip':<20}To show your computer's IP address")
+    print(f"{'calculator':<20}It calculates numbers")
+    print(f"{'ver':<20}To display version of CustomCmd")
+    print(f"{'qr':<20}make a QR code")
+    print("For all commands, type 'all'")
     print("\n")
     print(f"{'________________________':<20}")
     print(f"{' Add your own below':<20}")
@@ -77,6 +95,10 @@ def main():
             commands[user_input]()
         elif user_input.endswith(".py"):
             run_python_script(user_input)
+
+        elif user_input.endswith(".pyw"):
+            run_python_script(user_input)    
+
         else:
             print(f"{Fore.RED}Command not recognized. Type 'help' for assistance.{Fore.RESET}")
 
@@ -112,6 +134,86 @@ def all_commands():
     print(f"{'________________________':<20}")
     pass
 
+def date():
+    from datetime import date
+    today = date.today()
+    d2 = today.strftime("%B %d, %Y")
+    print("Today's date is:", d2)
+
+
+def ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    ip = s.getsockname()[0]
+    hostname = socket.gethostname()
+    s.close()
+    print(f"Your computer's hostname is: {hostname}")
+    print(f"Your computer's IP address is: {ip}")
+
+def calculator():
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+
+    choice = input("Enter choice (1/2/3/4): ")
+
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    if choice == '1':
+        result = num1 + num2
+        print("Result: " + str(result))
+    elif choice == '2':
+        result = num1 - num2
+        print("Result: " + str(result))
+    elif choice == '3':
+        result = num1 * num2
+        print("Result: " + str(result))
+    elif choice == '4':
+        if num2 != 0:
+            result = num1 / num2
+            print("Result: " + str(result))
+        else:
+            print("Cannot divide by zero.")
+    else:
+        print("Invalid input")
+
+
+
+def ver():
+    ver = "0.3"
+    print(f"{Fore.CYAN}Version: {ver}{Fore.RESET}")
+    print("(C) 2023 Retroboi64, All Rights Reserved.")
+
+
+
+def roll_dice():
+    return random.randint(1, 6)
+
+
+def get_joke():
+    jokes = ["Why did the scarecrow win an award? Because he was outstanding in his field!", "Why don't scientists trust atoms? Because they make up everything!"]
+    return random.choice(jokes)
+
+
+
+import qrcode
+
+def generate_qr_code():
+    """Generate a QR code"""
+    print("This is were it well generate a QR code in this path: ", os.getcwd())
+    file_name = input("Enter the file name: ")
+    data = input("Enter the url or data: ")
+    qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10, border=4)
+    qr.add_data(data)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save(file_name)
+
+
+
 # debug commands
 def debug_error_1():
     messagebox.showerror("Error", "This is a test error.")
@@ -129,6 +231,13 @@ commands = {
     "exit": exit,
     "cd": change_directory,
     "all": all_commands,
+    "date": date,
+    "ip": ip,
+    "calculator": calculator,
+    "ver": ver,
+    "roll dice": roll_dice,
+    "get joke": get_joke,
+    "qr": generate_qr_code,
     #debug commands
     "debug_error_1": debug_error_1,
     #custom commands
