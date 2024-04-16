@@ -13,17 +13,16 @@ echo [91mWarning Run install bat if you have already installed it.[0m
 echo.
 echo Please select the mode to run the customCMD script:
 echo 1. Text-Based Mode
-echo 2. GUI Mode (This mode is used for debugging)
-set /p mode="Enter the mode (1/2): "
+echo 2. Credits
+set /p mode="Enter the mode (1/2): "
 
 if "%mode%"=="1" (
     echo Running in Text-Based Mode...
     python customCMD/main.py
-) else if "%mode%"=="2" (
-    echo Running in GUI Mode...
-    python customCMD/gui.pyw
+if "%mode%"=="2" (
+    echo Made by Retroboi64.
 ) else (
-    echo Invalid input. Please enter 1 for Text-Based Mode or 2 for GUI Mode.
+    echo Invalid input. Please enter 1 for Text-Based Mode
     goto menu
 )
 
